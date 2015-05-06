@@ -1,3 +1,6 @@
+(ns koans.06-functions
+  (:require [koan-engine.core :refer :all]))
+
 (defn multiply-by-ten [n]
   (* 10 n))
 
@@ -18,6 +21,9 @@
 
   "Even anonymous functions may take multiple arguments"
   (= __ (#(+ %1 %2 %3) 4 5 6))
+
+  "Arguments can also be skipped"
+  (= __ (#(* 15 %2) 1 2))
 
   "One function can beget another"
   (= 9 (((fn [] ___)) 4 5))

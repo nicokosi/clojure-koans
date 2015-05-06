@@ -1,3 +1,6 @@
+(ns koans.10-lazy-sequences
+  (:require [koan-engine.core :refer :all]))
+
 (meditations
   "There are many ways to generate a sequence"
   (= [1 2 3 4] (range 1 5))

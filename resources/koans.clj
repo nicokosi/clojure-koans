@@ -47,7 +47,7 @@
                 2
                 1
                 1
-                "Vancouver"
+                "Sochi"
                 nil
                 :key-not-found
                 true
@@ -55,13 +55,14 @@
                 "February"
                 1 "January"
                 2006 2010 2014
-                "Vancouver"]}]
+                "PyeongChang" "Sochi" "Vancouver"]}]
 
  ["06_functions" {"__" [81
                      20
                      10
                      60
-                     15]
+                     15
+                     30]
                "___" [+
                       *
                       (fn [f] (f 5))
@@ -72,7 +73,7 @@
                         nil
                         :glory
                         4 6 :your-road
-                        'doom 0
+                        1
                         :cocked-pistol
                         :say-what?]}]
 
@@ -100,12 +101,12 @@
                           95
                           (range 20)
                           :a]
-                    "___" [(fn [x] :foo)]}]
+                    "___" [(fn [x] x)]}]
 
  ["11_sequence_comprehensions" {"__" [[0 1 2 3 4 5]
-                                   (* index index)
+                                   (* x x)
                                    (range 10)
-                                   (odd? index) (* index index)
+                                   (odd? x) (* x x)
                                    [row column]
                                    ]}]
 
@@ -207,5 +208,15 @@
                         '((0 1 2) (3 4))
                         5
                         :hello
-                        (6 :this :are)
-                        ]}]]
+                        (6 :these :are)
+                        ]}]
+ ["21_group_by" {"__" [odd?
+                       {5 ["hello" "world"] 3 ["foo" "bar"]}
+                       {1 [{:name "Bob" :id 1}
+                           {:last-name "Smith" :id 1}]
+                        2 [{:name "Mike" :id 2}]}
+                       nil
+                       {:naughty-list [{:name "Jimmy" :bad true}
+                                       {:name "Joe" :bad true}]
+                        :nice-list [{:name "Jack" :bad false}]}]}]
+]
